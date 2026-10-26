@@ -18,21 +18,27 @@
           <span class="emoji-modern">🍥</span> Naruto RPG: O Caminho do Shinobi
         </h1>
         <div class="c">
-          <p>
+          <p class="creation-intro">
             Crie seu shinobi e viva livremente no mundo ninja: construa uma
             linhagem, forme uma equipe por confiança, candidate-se a
             organizações, enfrente missões com decisões próprias e descubra
             como suas escolhas mudam as relações e o mundo.
           </p>
-          <h4>Nome</h4>
-          <input
-            type="text"
-            id="nm"
-            maxlength="20"
-            placeholder="Seu nome ninja"
-          />
-          <h4>Idade</h4>
-          <input type="number" id="ag" min="6" max="40" value="12" />
+          <div class="creation-identity">
+            <div class="creation-field">
+              <label for="nm">Nome</label>
+              <input
+                type="text"
+                id="nm"
+                maxlength="20"
+                placeholder="Seu nome ninja"
+              />
+            </div>
+            <div class="creation-field">
+              <label for="ag">Idade</label>
+              <input type="number" id="ag" min="6" max="40" value="12" />
+            </div>
+          </div>
           <h4>Modo de criação</h4>
           <div class="g mode-choice">
             <label
@@ -64,8 +70,28 @@
               id="clanChoice"
               aria-label="Clã ou linhagem"
               aria-describedby="clanPreview"
-              onchange="updateIdentityPreview()"
+              aria-hidden="true"
+              tabindex="-1"
+              hidden
             ></select>
+            <div class="clan-picker" id="clanPicker">
+              <button
+                class="clan-picker-trigger"
+                id="clanPickerTrigger"
+                type="button"
+                aria-label="Clã ou linhagem"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="clanOptions"
+              ></button>
+              <div
+                class="clan-options"
+                id="clanOptions"
+                role="listbox"
+                aria-label="Escolha seu clã ou linhagem"
+                hidden
+              ></div>
+            </div>
             <div
               class="creation-choice-detail"
               id="clanPreview"
@@ -76,17 +102,33 @@
               id="specialtyChoice"
               aria-label="Especialização"
               aria-describedby="specialtyPreview"
-              onchange="updateIdentityPreview()"
+              aria-hidden="true"
+              tabindex="-1"
+              hidden
             ></select>
+            <div class="clan-picker" id="specialtyPicker">
+              <button
+                class="clan-picker-trigger"
+                id="specialtyPickerTrigger"
+                type="button"
+                aria-label="Especialização"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="specialtyOptions"
+              ></button>
+              <div
+                class="clan-options"
+                id="specialtyOptions"
+                role="listbox"
+                aria-label="Escolha sua especialização"
+                hidden
+              ></div>
+            </div>
             <div
               class="creation-choice-detail"
               id="specialtyPreview"
               aria-live="polite"
             ></div>
-            <small
-              >Clã e especialização dão bônus próprios, que crescem com seu
-              nível.</small
-            >
             <h4>Elemento</h4>
             <div class="g el" id="els"></div>
           </div>
