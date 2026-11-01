@@ -37,6 +37,93 @@
               <input type="number" id="ag" min="6" max="40" value="12" />
             </div>
           </div>
+          <section class="appearance-section" aria-labelledby="appearanceTitle">
+            <div class="appearance-heading">
+              <div>
+                <h4 id="appearanceTitle">Aparência do shinobi</h4>
+                <p>Personalize seu personagem e acompanhe o resultado na prévia.</p>
+              </div>
+              <span class="appearance-live">Prévia ao vivo</span>
+            </div>
+            <div class="appearance-layout">
+              <div class="avatar-preview" aria-live="polite">
+                <div id="avatarPreview"></div>
+                <strong id="avatarPreviewName">Seu shinobi</strong>
+                <span id="avatarPreviewDescription">Cabelo curto · olhos escuros · roupa azul</span>
+              </div>
+              <div class="appearance-controls" id="appearanceControls">
+                <div class="creation-field">
+                  <label for="hairStyle">Penteado</label>
+                  <select id="hairStyle">
+                    <option value="fringe" selected>Curto com franja</option>
+                  <option value="spiky">Espetado</option>
+                    <option value="long">Comprido</option>
+                    <option value="ponytail">Rabo de cavalo</option>
+                    <option value="bob">Chanel</option>
+                    <option value="curly">Cacheado</option>
+                    <option value="undercut">Undercut</option>
+                    <option value="bun">Coque</option>
+                  </select>
+                </div>
+                <div class="creation-field">
+                  <label for="hairColor">Cor do cabelo</label>
+                  <select id="hairColor">
+                    <option value="black">Preto</option>
+                    <option value="blonde">Loiro</option>
+                    <option value="brown">Castanho</option>
+                    <option value="red">Ruivo</option>
+                    <option value="blue">Azul</option>
+                    <option value="white">Branco</option>
+                    <option value="pink">Rosa</option>
+                    <option value="green">Verde</option>
+                  </select>
+                </div>
+                <div class="creation-field">
+                  <label for="eyeColor">Cor dos olhos</label>
+                  <select id="eyeColor">
+                    <option value="dark">Escuros</option>
+                    <option value="blue">Azuis</option>
+                    <option value="green">Verdes</option>
+                    <option value="red">Vermelhos</option>
+                    <option value="purple">Violetas</option>
+                    <option value="amber">Âmbar</option>
+                    <option value="gray">Cinzentos</option>
+                  </select>
+                </div>
+                <div class="creation-field">
+                  <label for="skinTone">Tom de pele</label>
+                  <select id="skinTone">
+                    <option value="light">Claro</option>
+                    <option value="medium" selected>Médio</option>
+                    <option value="tan">Moreno</option>
+                    <option value="olive">Oliva</option>
+                    <option value="dark">Escuro</option>
+                    <option value="deep">Retinto</option>
+                  </select>
+                </div>
+                <div class="creation-field">
+                  <label for="faceMarks">Detalhes do rosto</label>
+                  <select id="faceMarks">
+                    <option value="none">Sem marcas</option>
+                    <option value="whiskers">Marcas nas bochechas</option>
+                    <option value="scar">Cicatriz</option>
+                    <option value="freckles">Sardas</option>
+                  </select>
+                </div>
+                <div class="creation-field">
+                  <label for="outfitColor">Cor da roupa</label>
+                  <select id="outfitColor">
+                    <option value="blue" selected>Azul</option>
+                    <option value="orange">Laranja</option>
+                    <option value="red">Vermelha</option>
+                    <option value="green">Verde</option>
+                    <option value="purple">Roxa</option>
+                    <option value="black">Preta</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </section>
           <h4>Modo de criação</h4>
           <div class="g mode-choice">
             <label
@@ -128,6 +215,7 @@
               aria-live="polite"
             ></div>
             <h4>Elemento</h4>
+            <p class="element-hint">Escolha a natureza que guiará seus jutsus.</p>
             <div class="g el" id="els"></div>
           </div>
           <div class="row">
